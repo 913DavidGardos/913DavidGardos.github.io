@@ -1,0 +1,173 @@
+
+//INTRO SECTION STYLE
+
+.intro{
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+//NAVBAR LINKS STYLE
+.navLinks{
+    padding-left: 100px;
+}
+
+li{
+    padding: 0 0.9rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h3{
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+//CUSTOM COLORS
+
+$dark: #353941;
+$light: #90b8f8;
+
+$primary: #353941;
+$secondary: #5f85db;
+//#678eb4
+
+//ICONS
+
+.icon_{
+    // width: 30px;
+    // height: 30px;
+    object-fit: fill;
+}
+
+.paragraphPad
+{
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    border-radius: 25px;
+    background-color: $dark;
+    padding: 10px;
+}
+
+.projectsTitle
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 25%;
+    min-width: 15%;
+    overflow: hidden;
+}
+
+.separator
+{
+    padding: 20px;
+}
+
+// animation INTRO
+:root {
+  --bg-color: white;
+  --typewriterSpeed: 550ms;
+  --typewriterCharacters: 19;
+}
+
+.mybody{
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  min-height: 66vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: var(--bg-color);
+}
+
+h1{
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  position: relative;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  width: max-content;
+  color: $dark;
+}
+
+h2{
+    
+    position: relative;
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    width: max-content;
+    color: $dark;
+    animation: slideMe .7s ease-in;
+}
+
+@keyframes slideMe{
+    0%{
+        transform: skewX(53def) translateX(-500px);
+    }
+    100%{
+        transform: skew(0deg);
+    }
+}
+
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h1::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+h1::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 1s steps(var(--typewriterCharacters)) infinite;
+}
+
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+.aboutPtext{
+    text-align: start;
+    font-family:"Courier New", monospace;
+    font-size:16px;
+    color: $dark;
+}
+
+.aboutTitletext{
+    padding-top: 15px;
+    text-align: start;
+    font-family:"Courier New", monospace;
+    font-size:x-large;
+    font-weight: bold;
+    color: $dark;
+}
+
+// IMPORT BOOTSTRAP 5
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../scss/Navbar/NavbarItemHoverAnimation.scss";
