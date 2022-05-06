@@ -168,6 +168,33 @@ h1::after {
     color: $dark;
 }
 
+//Contact
+
+.hover-select-animation {
+  display: inline-block;
+  position: relative;
+  color:#90b8f8;
+}
+
+.hover-select-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  background-color: #90b8f8;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-select-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
 // IMPORT BOOTSTRAP 5
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../scss/Navbar/NavbarItemHoverAnimation.scss";
