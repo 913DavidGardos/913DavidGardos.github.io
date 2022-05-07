@@ -191,6 +191,8 @@ h1::after {
   background-color: $secondary;
 }
 
+a:hover { cursor: default; }
+
 // IMPORT BOOTSTRAP 5
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../scss/Navbar/NavbarItemHoverAnimation.scss";
