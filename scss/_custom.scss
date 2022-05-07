@@ -168,11 +168,27 @@ h1::after {
     color: $dark;
 }
 
-
-.GitLink{
-  text-decoration:none;
+.hoverLink{
+  color: white;
 }
 
+.hoverLink:hover{
+  color: white;
+  padding: 5px;
+  border-radius: 18px;
+  background-color: $secondary;
+}
+
+.hoverLinkBlack{
+  color: black;
+}
+
+.hoverLinkBlack:hover{
+  color: white;
+  padding: 5px;
+  border-radius: 18px;
+  background-color: $secondary;
+}
 
 // IMPORT BOOTSTRAP 5
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
